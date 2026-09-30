@@ -1,0 +1,14 @@
+workflows:
+  android-release:
+    name: Manager Assistant Android
+    environment:
+      flutter: stable
+    scripts:
+      - name: Ensure Flutter Android project files
+        script: flutter create --platforms=android .
+      - name: Get packages
+        script: flutter pub get
+      - name: Build APK
+        script: flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
