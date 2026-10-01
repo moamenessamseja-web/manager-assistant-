@@ -1,5 +1,5 @@
 workflows:
-  android-workflows:
+  
   android-release:
     name: Manager Assistant - APK Release
     instance_type: mac_mini_m2
